@@ -1,0 +1,84 @@
+Windows Command Line (cmd) & Batch Script Management
+
+------------->Section 4:Date, Time and Diskpart Command<-------------
+
+
+8.Setting Date and Time 
+
+---->date
+---->date /t && time /t
+---->date 20-02-22 && time 12:00
+---->tzutil /?
+
+9.Disk Management with Diskpart part1
+
+---->diskpart
+---->list
+---->select disk 0
+---->list disk 
+---->list partition
+---->list vdisk
+
+
+10.Disk Management with Diskpart part2
+---->create
+---->create partition
+---->create partition primary size=100
+---->help shrink
+---->select partition 3
+---->delete partition
+
+
+-------------> Section 5:Group Policy Commands <-------------
+
+11.Gpupdate Command
+
+---->gpupdate ?
+---->gpupdate /force
+---->gpupdate /sync
+
+12.Gpresult Command
+
+---->gpresult
+---->gpresult /R
+
+
+
+-------------> Section 6:Format,Shutdown and Logoff Commands<-------------
+
+13.Formatting Disk Drives
+
+---->format /?
+---->format D: /fs:NTFS /v:Apps /q
+
+14.Shutting Down,Restarting and Logging Off
+
+
+---->shutdown
+---->shutdown /m \\remote01 /s /t 300 /c "hi omar please keep claim we will shut down ur computer lol"
+
+
+
+-------------> Section 7:Batch files and WMIC <-------------
+
+
+15.Creating Batch Files
+
+
+to create batch file so its typically has a .bat extension then to ran 
+it just we call the name of the file e.g(batch.bat)
+---->batch
+
+16.WMIC command Overview
+---->wmic bios
+---->wmic bios get serialnumber
+---->wmic computersystem
+---->wmic computersystem get manufacture
+---->wmic computersystem get model
+---->wmic computersystem get model,manufacturer
+---->wmic /node:IP(e.g 192.168. ...) bios get serialnumber
+
+
+
+
+
